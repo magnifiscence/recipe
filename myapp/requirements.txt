@@ -1,0 +1,8 @@
+Flask
+Flask-Mail
+itsdangerous
+Flask-SQLAlchemy
+Flask-Bcrypt
+Flask-Login
+Jinja2
+MarkupSafe
