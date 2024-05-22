@@ -1,3 +1,7 @@
+.bg-custom {
+  background-color: #2611ee !important;
+}
+
 body {
   background: #fafafa;
   color: #333333;

@@ -15,6 +15,14 @@
       </div>
       <h2 class="article-title">{{ post.title }}</h2>
       <p class="article-content">{{ post.content }}</p>
+      {% if post.video_file %}
+        <video width="320" height="240" controls>
+          <source src="{{ url_for('static', filename='videos/' + post.video_file) }}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      {% else %}
+        <p>No video uploaded.</p>
+      {% endif %}
     </div>
   </article>
   <!-- Modal -->
