@@ -15,3 +15,12 @@ def home():
 @main.route("/about")
 def about():
     return render_template('about.html', title='About')
+
+@main.route("/search")
+def search():
+    query = request.args.get('query')
+    if query:
+        results = Post.query.filter(Post.title.contains(query) | Post.content.contains(query)).all()
+    else:
+        results = []
+    return render_template('search_results.html', query=query, results=results)
